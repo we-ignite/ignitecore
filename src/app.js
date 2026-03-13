@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 
 import healthcheckRouter from "./routes/healthcheck.routes.js";
 import { errorHandler } from "./middlewares/error.middlewares.js";
-import eventRouter from "./routes/event.routes.js"
+import eventRouter from "./routes/event.routes.js";
 import entriesRouter from "./routes/entries.routes.js";
 import paymentRouter from "./routes/payment.routes.js";
 
@@ -29,4 +29,4 @@ app.use(`${baseUrl}/payments`, paymentRouter);
 
 app.use(errorHandler);
 
-export { app };
+export default app;
